@@ -18,7 +18,11 @@ extension SettingsViewController {
     /// `UIDevice.systemName` only reports "iPadOS" on iOS 13+; the idiom is
     /// the same answer on every version.
     var systemVersionValue: String {
+        #if targetEnvironment(macCatalyst)
+        let name = "macOS"
+        #else
         let name = UIDevice.current.userInterfaceIdiom == .pad ? "iPadOS" : "iOS"
+        #endif
         return "\(name) \(UIDevice.current.systemVersion)"
     }
 

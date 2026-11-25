@@ -26,7 +26,7 @@ final class PlayerMenuOverlay: UIView {
     /// Larger touch targets on iPad — 44pt rows are hard to hit on the
     /// mini's dense screen; iPhone keeps the compact layout.
     enum Metrics {
-        static let isPad = UIDevice.current.userInterfaceIdiom == .pad
+        static let isPad = UIDevice.current.userInterfaceIdiom != .phone
         static let panelWidth: CGFloat = isPad ? 360 : 280
         static let rowHeight: CGFloat = isPad ? 56 : 44
         static let rowFontSize: CGFloat = isPad ? 17 : 15

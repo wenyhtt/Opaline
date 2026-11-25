@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49E0100B00000000000000EB /* OpalineOpenIn.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 49E0100100000000000000E1 /* OpalineOpenIn.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		49E0100B00000000000000EB /* OpalineOpenIn.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 49E0100100000000000000E1 /* OpalineOpenIn.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		49E0100F00000000000000EF /* YouTubeLinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0100E00000000000000EE /* YouTubeLinkParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -299,6 +299,9 @@
 /* Begin PBXTargetDependency section */
 		49E0100C00000000000000EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilters = (
+				ios,
+			);
 			target = 49E0100200000000000000E2 /* OpalineOpenIn */;
 			targetProxy = 49E0100D00000000000000ED /* PBXContainerItemProxy */;
 		};
@@ -331,7 +334,7 @@
 				PRODUCT_NAME = Opaline;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -365,7 +368,7 @@
 				PRODUCT_NAME = Opaline;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

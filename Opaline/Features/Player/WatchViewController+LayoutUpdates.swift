@@ -7,7 +7,7 @@ extension WatchViewController {
     /// for two: the landscape sidebar is narrow, and on iPhone the related list
     /// matches the single-column feeds on Home and Subscriptions.
     func relatedColumns(isLandscape: Bool) -> CGFloat {
-        if isLandscape || UIDevice.current.userInterfaceIdiom != .pad {
+        if isLandscape || UIDevice.current.userInterfaceIdiom == .phone {
             return 1
         }
         return 2

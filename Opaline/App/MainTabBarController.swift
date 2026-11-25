@@ -29,14 +29,14 @@ class MainTabBarController: UITabBarController {
     }
 
     override var shouldAutorotate: Bool {
-        if UIDevice.current.userInterfaceIdiom != .pad {
+        if UIDevice.current.userInterfaceIdiom == .phone {
             return false
         }
         return selectedViewController?.shouldAutorotate ?? super.shouldAutorotate
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom != .pad {
+        if UIDevice.current.userInterfaceIdiom == .phone {
             return .portrait
         }
         return selectedViewController?.supportedInterfaceOrientations

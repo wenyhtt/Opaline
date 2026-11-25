@@ -194,7 +194,7 @@ extension WatchViewController {
               playerView.isFullscreen else {
             return
         }
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom != .phone {
             exitFullscreen(playerView: playerView)
         } else {
             // Rotating back to portrait is what leaves fullscreen on iPhone.
